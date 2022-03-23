@@ -7,6 +7,7 @@ let repoSchema = mongoose.Schema({
   repoName: String,
   ownerName: String,
   repoLink: String,
+  forks: Number
 });
 
 //compiling schema into a Model:
@@ -16,7 +17,7 @@ let save = (/* TODO */) => {
   // TODO: Your code here
   // This function should save a repo or repos to
   // the MongoDB
-
+  await Repo.save(); //?
 }
 
 module.exports.save = save;
