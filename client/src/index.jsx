@@ -19,7 +19,7 @@ class App extends React.Component {
   componentDidMount() {
     //if refresh -> setState to 25 repos
     //GET to repo endpoint
-    display25();
+    // display25();
   }
 
   search (term) {
@@ -27,19 +27,20 @@ class App extends React.Component {
     // TODO
     axios.post('/repos', {
       //key:value used in server
-      data: {username: term};
-
+      username: term
     })
     //if succesful, aka fetched data from db?
     .then(function(res) {
       //what to do after we get res:
-
+      // res.
     })
     //if error:
     .catch(function(err) {
       console.log(err);
-      res.send(err.message)  // right?
-    }))
+      // res.send(err.message)  // right?3
+    })
+    //test to see what's inside of res
+    axios.get('/repos').then(res=>console.log(res)).catch(()=>console.log(error));
   }
 
   //some method to display top 25 repos:
