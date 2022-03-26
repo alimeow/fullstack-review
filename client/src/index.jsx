@@ -29,23 +29,22 @@ class App extends React.Component {
       //key:value used in server
       username: term
     })
-    //if succesful, aka fetched data from db?
-    .then(function(res) {
+    .then( (result) =>
       //what to do after we get res:
-      // res.
-    })
-    //if error:
+      console.log(result)
+      // res.sendStatus(200)
+    )
     .catch(function(err) {
       console.log(err);
       // res.send(err.message)  // right?3
     })
     //test to see what's inside of res
-    axios.get('/repos').then(res=>console.log(res)).catch(()=>console.log(error));
+    // axios.get('/repos').then(res=>console.log('res')).catch((err)=>console.log(err));
   }
 
   //some method to display top 25 repos:
   display25() {
-    axios.get('/repos', )
+    axios.get('/repos')
 
   }
 
